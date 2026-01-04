@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 대구 상가 매물 플랫폼 Design System
+   Navy/Blue 팔레트 기반 전문적인 부동산 플랫폼 테마
+*/
+
+@layer base {
+  :root {
+    /* Navy Primary Palette */
+    --background: 220 20% 97%;
+    --foreground: 220 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 10%;
+
+    /* Navy 500 as primary */
+    --primary: 220 55% 27%;
+    --primary-foreground: 220 20% 98%;
+
+    /* Light Navy for secondary */
+    --secondary: 220 30% 95%;
+    --secondary-foreground: 220 55% 27%;
+
+    /* Muted grays */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    /* Blue accent */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 220 10% 26%;
+    --sidebar-primary: 220 55% 27%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 30% 96%;
+    --sidebar-accent-foreground: 220 55% 27%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar: 0 0% 99%;
+
+    /* Chart colors */
+    --chart-1: 220 55% 27%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 220 10% 46%;
+
+    /* Typography */
+    --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Shadows */
+    --shadow-2xs: 0 1px 2px 0 hsl(220 10% 0% / 0.03);
+    --shadow-xs: 0 1px 3px 0 hsl(220 10% 0% / 0.04);
+    --shadow-sm: 0 1px 3px 0 hsl(220 10% 0% / 0.06), 0 1px 2px -1px hsl(220 10% 0% / 0.06);
+    --shadow: 0 2px 4px 0 hsl(220 10% 0% / 0.06), 0 1px 2px -1px hsl(220 10% 0% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(220 10% 0% / 0.08), 0 2px 4px -2px hsl(220 10% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 10% 0% / 0.08), 0 4px 6px -4px hsl(220 10% 0% / 0.04);
+    --shadow-xl: 0 20px 25px -5px hsl(220 10% 0% / 0.1), 0 8px 10px -6px hsl(220 10% 0% / 0.04);
+    --shadow-2xl: 0 25px 50px -12px hsl(220 10% 0% / 0.25);
+
+    /* Custom tokens for the platform */
+    --header-height: 56px;
+    --filter-width: 280px;
+
+    /* Status badge colors */
+    --status-active: 142 76% 36%;
+    --status-negotiation: 38 92% 50%;
+    --status-completed: 220 10% 60%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 220 20% 98%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 220 20% 98%;
+
+    --popover: 220 30% 12%;
+    --popover-foreground: 220 20% 98%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 40% 10%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 220 20% 98%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 90% 45%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 217 91% 65%;
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 220 20% 98%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 220 40% 10%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 220 20% 98%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 217 91% 65%;
+    --sidebar: 220 30% 10%;
+
+    --chart-1: 217 91% 65%;
+    --chart-2: 220 55% 50%;
+    --chart-3: 142 70% 50%;
+    --chart-4: 38 90% 55%;
+    --chart-5: 220 10% 55%;
+
+    --status-active: 142 70% 45%;
+    --status-negotiation: 38 90% 50%;
+    --status-completed: 220 10% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+/* Custom utility classes for the platform */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Status badge utilities */
+  .status-active {
+    @apply bg-[hsl(var(--status-active))] text-[hsl(var(--success-foreground))];
+  }
+
+  .status-negotiation {
+    @apply bg-[hsl(var(--status-negotiation))] text-[hsl(var(--warning-foreground))];
+  }
+
+  .status-completed {
+    @apply bg-[hsl(var(--status-completed))] text-[hsl(var(--muted-foreground))];
+  }
+
+  /* Map pin shadows */
+  .pin-shadow {
+    filter: drop-shadow(0 2px 4px hsl(220 10% 0% / 0.2));
+  }
+
+  /* Scrollbar styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted/30 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30;
+  }
+
+  /* Bottom sheet animation */
+  .bottom-sheet-transition {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
